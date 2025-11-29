@@ -11,9 +11,9 @@
   <style>
     
     :root{
-      --bg:#080808;            /* matte black */
-      --muted:#AFAFAF;         /* muted grey */
-      --accent:#D7C8B1;        /* warm accent (subtle) */
+      --bg:#080808;            
+      --muted:#AFAFAF;         
+      --accent:#D7C8B1;        
       --glass: rgba(255,255,255,0.04);
       --max-width:1100px;
     }
@@ -185,7 +185,7 @@ And it lets me stay present.</p>
       <section id="contact">
   <div class="contact-container">
 
-    <!-- LEFT SIDE: Caption -->
+    
     <div class="contact-text">
       <div class="section-title">Connect</div>
 
@@ -229,7 +229,7 @@ And it lets me stay present.</p>
   </div>
 
   <script>
-    // Basic interactivity: open modal when gallery item clicked, scroll button
+    
     document.getElementById('year').textContent = new Date().getFullYear();
 
     const grid = document.getElementById('grid');
@@ -260,15 +260,15 @@ And it lets me stay present.</p>
     closeBtn.addEventListener('click', closeModal);
     modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
 
-    // Scroll to gallery
+    
     document.getElementById('view-gallery').addEventListener('click', function(){
       document.getElementById('gallery').scrollIntoView({behavior:'smooth'});
     });
 
-    // Download placeholder (creates simple PDF with basic info) using browser print as fallback
+    
     document.getElementById('download').addEventListener('click', function(e){
       e.preventDefault();
-      // Simple approach: open a new window with printable summary
+    
       const w = window.open('', '_blank');
       w.document.write('<html><head><title>Silent Frames — About</title></head><body style="background:#fff;color:#000;font-family:Arial;padding:20px">');
       w.document.write('<h1>Silent Frames</h1>');
@@ -278,7 +278,7 @@ And it lets me stay present.</p>
       w.print();
     });
 
-    // Accessibility: allow Esc to close modal
+    
     document.addEventListener('keydown', function(e){
       if(e.key === 'Escape' && modal.classList.contains('show')) closeModal();
     });
@@ -286,4 +286,5 @@ And it lets me stay present.</p>
 
 </body>
 </html>
+
 
